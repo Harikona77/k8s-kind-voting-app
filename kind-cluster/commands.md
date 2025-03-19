@@ -182,6 +182,10 @@ kubectl port-forward svc/kind-prometheus-grafana -n monitoring 31000:80 --addres
 //to get graphana password//
 
 kubectl get secrets -n monitoring
+
+
+
+
 kubectl get secret kind-prometheus-grafana -n monitoring -o jsonpath="{.data.admin-password}" | base64 --decode
 
 
